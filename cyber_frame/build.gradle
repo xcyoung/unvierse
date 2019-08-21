@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion build_versions.target_sdk
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode build_versions.version_code
+        versionName build_versions.version_name
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.kotlin.stdlib
+    implementation deps.support.app_compat
+    implementation deps.support.core_ktx
+    implementation deps.constraint_layout
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    //lifecycle
+    implementation deps.lifecycle.extensions
+    kapt deps.lifecycle.compiler
+    //retrofit2
+    api deps.retrofit.runtime
+    api deps.retrofit.adapter_rxjava2
+    api deps.retrofit.gson
+    //rxjava
+    api deps.rxjava2
+    api deps.rx_android
+    api deps.rx_binding
+
+    api deps.glide.runtime
+    kapt deps.glide.compiler
+
+    implementation deps.rxpermissions
+}
