@@ -179,6 +179,7 @@ deps.pandora = 'com.github.whataa:pandora:v2.0.4'
 deps.imagebox = 'com.github.zhouzhuo810:ZzImageBox:1.1.5'
 deps.matisse = 'com.zhihu.android:matisse:0.5.1'
 deps.rxpermissions = 'com.github.tbruyelle:rxpermissions:0.10.2'
+deps.contacts = 'com.github.tamir7.contacts:contacts:1.1.7'
 ext.deps = deps
 
 static def addRepos(RepositoryHandler handler) {

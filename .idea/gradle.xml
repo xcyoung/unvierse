@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/cyber_frame" />
+            <option value="$PROJECT_DIR$/module-contact" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

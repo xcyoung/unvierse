@@ -1,1 +1,1 @@
-include ':app', ':cyber_frame'
+include ':app', ':cyber_frame', ':module-contact'
